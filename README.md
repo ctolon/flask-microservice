@@ -12,6 +12,8 @@
 
 * All databases stored at `<service>/database` folder.
 
+* You can found postman collection in `postman` folder.
+
 ## User Microservice
 
 * Default Port: `5000` and Default Host: `0.0.0.0`
@@ -63,3 +65,13 @@
 * First, you need to install `docker` and `docker-compose` on your machine.
 
 * Then you can run the application using `docker compose build && docker-compose up -d` command in `frontend` folder. For stopping the application, you can use `docker-compose down` command. For restarting the application, you can use `docker-compose restart` command.
+
+## Screenshots
+
+![plot](images/1.png)
+![plot](images/2.png)
+![plot](images/3.png)
+![plot](images/4.png)
+![plot](images/5.png)
+![plot](images/6.png)
+![plot](images/7.png)

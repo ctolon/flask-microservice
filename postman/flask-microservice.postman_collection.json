@@ -1,0 +1,343 @@
+{
+	"info": {
+		"_postman_id": "39e5ccac-38bc-4186-bf91-f9432046837c",
+		"name": "flask-microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21566409"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "ctolon",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://0.0.0.0:5000/api/user/login"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "ctolon",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://0.0.0.0:5000/api/user/create"
+					},
+					"response": []
+				},
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://0.0.0.0:5000/api/user/all"
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://0.0.0.0:5000/api/user/logout"
+					},
+					"response": []
+				},
+				{
+					"name": "get-current-user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://0.0.0.0:5000/api/user/get"
+					},
+					"response": []
+				},
+				{
+					"name": "exists",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://0.0.0.0:5000/api/user/exists/ctolon"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "book",
+			"item": [
+				{
+					"name": "get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "ctolon",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://0.0.0.0:5002/api/book/get/test"
+					},
+					"response": []
+				},
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://0.0.0.0:5002/api/book/all"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "testtt",
+									"type": "text"
+								},
+								{
+									"key": "slug",
+									"value": "testt",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "test.jpeg",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://0.0.0.0:5002/api/book/create"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "open-order",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "pbkdf2:sha256:600000$LMetcr8krKaxQiUA$7dfdad1b4eb2c48b8c0298b08e9b3ee6fdee6e77d3e473abdcbd6b53ebdae78c",
+								"type": "text"
+							}
+						],
+						"url": "http://0.0.0.0:5001/api/order"
+					},
+					"response": []
+				},
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://0.0.0.0:5001/api/order/all"
+					},
+					"response": []
+				},
+				{
+					"name": "add-item",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "pbkdf2:sha256:600000$lipnIbhnq18YjtQt$c563a2c2fae2e6e0f86c24457d8b1511cca2f7bd3d7d7d1c579c3da4ff292885",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "book_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://0.0.0.0:5001/api/order/add-item"
+					},
+					"response": []
+				},
+				{
+					"name": "checkout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "pbkdf2:sha256:600000$lipnIbhnq18YjtQt$c563a2c2fae2e6e0f86c24457d8b1511cca2f7bd3d7d7d1c579c3da4ff292885",
+								"type": "text"
+							}
+						],
+						"url": "http://0.0.0.0:5001/api/order/checkout"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "frontend",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://0.0.0.0:5003"
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://0.0.0.0:5003/register"
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://0.0.0.0:5003/register"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://0.0.0.0:5003/login"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://0.0.0.0:5003/login"
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://0.0.0.0:5003/logout"
+					},
+					"response": []
+				},
+				{
+					"name": "book-slug",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://0.0.0.0:5003/book/asd"
+					},
+					"response": []
+				},
+				{
+					"name": "book-slug",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://0.0.0.0:5003/book/asd"
+					},
+					"response": []
+				},
+				{
+					"name": "checkout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://0.0.0.0:5003/checkout"
+					},
+					"response": []
+				},
+				{
+					"name": "thank-you",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://0.0.0.0:5003/thank-you"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
