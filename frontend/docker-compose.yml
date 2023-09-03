@@ -1,0 +1,63 @@
+version: "3.8"
+
+services:
+  user-service:
+    image: flask-user-service
+    container_name: user-service
+    hostname: user-service
+    build:
+      context: ../user
+      dockerfile: Dockerfile
+    ports:
+      - "${USERAPP_PORT}:${USERAPP_PORT}"
+    volumes:
+      - userapp:/userapp
+    restart: always
+
+  book-service:
+    image: flask-book-service
+    container_name: book-service
+    hostname: book-service
+    build:
+      context: ../book
+      dockerfile: Dockerfile
+    ports:
+      - "${BOOKAPP_PORT}:${BOOKAPP_PORT}"
+    volumes:
+      - bookapp:/bookapp
+    restart: always
+
+  order-service:
+    image: flask-order-service
+    container_name: order-service
+    hostname: order-service
+    build:
+      context: ../order
+      dockerfile: Dockerfile
+    ports:
+      - "${ORDERAPP_PORT}:${ORDERAPP_PORT}"
+    volumes:
+      - orderapp:/orderapp
+    restart: always
+
+  frontend-service:
+    image: flask-frontend-service
+    container_name: frontend-service
+    hostname: frontend-service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${FRONTENDAPP_PORT}:${FRONTENDAPP_PORT}"
+    volumes:
+      - frontendapp:/frontendapp
+    restart: always
+
+# networks:
+  
+volumes:
+  userapp: {}
+  bookapp: {}
+  orderapp: {}
+  frontendapp: {}
+

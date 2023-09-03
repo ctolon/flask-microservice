@@ -1,0 +1,6 @@
+# Python 3.10.12
+flask
+Flask-SQLAlchemy
+flask-migrate
+flask-login
+python-dotenv

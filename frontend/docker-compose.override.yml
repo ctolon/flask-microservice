@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  user-service:
+    volumes:
+      - ../user/:/userapp/
+    ports:
+      - "${USERAPP_PORT}:${USERAPP_PORT}"
+
+  book-service:
+    volumes:
+      - ../book/:/bookapp/
+
+  order-service:
+    volumes:
+      - ../order/:/orderapp/
+    ports:
+      - "${ORDERAPP_PORT}:${ORDERAPP_PORT}"
+
+  frontend-service:
+    volumes:
+      - ./:/frontendapp/
+    ports:
+      - "${FRONTENDAPP_PORT}:${FRONTENDAPP_PORT}"

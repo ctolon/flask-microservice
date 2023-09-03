@@ -1,0 +1,10 @@
+# Python 3.10.12
+flask
+Flask-SQLAlchemy
+flask-migrate
+flask-login
+flask-bootstrap
+Flask-WTF
+python-dotenv
+requests
+Jinja2
